@@ -33,7 +33,7 @@ screenHeight :: Int
 screenHeight = 640
 
 size :: Int
-size = 100
+size = 200
 
 initialWorld :: World
 initialWorld = World { worldBoard = (array indexRange $ map (, Empty) (range indexRange)) // [ ((0, 0), Filled), ((1, 1), Filled) ]
