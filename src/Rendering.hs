@@ -21,11 +21,27 @@ cellsOfBoard board cell cellPicture =
     $ filter (\(_, e) -> e == cell)
     $ assocs board
 
-filledCellsOfBoard :: Board -> Picture
-filledCellsOfBoard board = cellsOfBoard board Filled filledCell
+vertexChoiceACellsOfBoard :: Board -> Picture
+vertexChoiceACellsOfBoard board = color red $ cellsOfBoard board VertexChoiceA filledCell
+
+
+vertexChoiceBCellsOfBoard :: Board -> Picture
+vertexChoiceBCellsOfBoard board = color green $ cellsOfBoard board VertexChoiceB filledCell
+
+
+vertexChoiceCellsOfBoard :: Board -> Picture
+vertexChoiceCellsOfBoard board =  color blue $ cellsOfBoard board VertexChoiceC filledCell
+
+choosedPointCellOfBoard :: Board -> Picture
+choosedPointCellOfBoard board = color white $ cellsOfBoard board ChoosedPoint filledCell
 
 pictureFilledCellOfBoard :: Board -> Picture
-pictureFilledCellOfBoard board = color white (filledCellsOfBoard board)
+pictureFilledCellOfBoard board = pictures [  
+                                              vertexChoiceACellsOfBoard board
+                                            , vertexChoiceBCellsOfBoard board
+                                            , vertexChoiceCellsOfBoard board
+                                            , choosedPointCellOfBoard board
+                                          ]
 
 worldAsPicture :: World -> Picture
 worldAsPicture world = translate (fromIntegral screenWidth * (-0.5))

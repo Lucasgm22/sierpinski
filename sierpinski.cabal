@@ -25,6 +25,8 @@ executable sierpinski
   build-depends:         base >= 4.7 && < 5
                        , gloss
                        , array
+                       , random
+                       , composition-prelude
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
