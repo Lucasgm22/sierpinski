@@ -1,5 +1,5 @@
 module Rendering (
-    gameAsPicture
+    worldAsPicture
 ) where
 
-gameAsPicture = undefined
+worldAsPicture = undefined

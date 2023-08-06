@@ -2,7 +2,7 @@ module Main (main) where
 
 import Graphics.Gloss
 
-import Game
+import World
 import Logic
 import Rendering
 import Animation
@@ -14,4 +14,4 @@ backgroundColor :: Color
 backgroundColor = makeColor 0 0 0 255
 
 main :: IO ()
-main = play window backgroundColor 30 initialGame gameAsPicture transformGame animation
+main = play window backgroundColor 30 initialWorld worldAsPicture transformWorld animation

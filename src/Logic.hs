@@ -1,5 +1,5 @@
 module Logic ( 
-    transformGame
+    transformWorld
 ) where
 
-transformGame = const id
+transformWorld = const id

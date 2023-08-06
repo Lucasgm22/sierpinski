@@ -17,13 +17,14 @@ extra-source-files:  README.md
 executable sierpinski
   hs-source-dirs:      src
   main-is:             Main.hs
-  other-modules:         Game
+  other-modules:         World
                        , Logic
                        , Animation
                        , Rendering
   default-language:    Haskell2010
   build-depends:         base >= 4.7 && < 5
                        , gloss
+                       , array
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
