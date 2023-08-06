@@ -14,4 +14,4 @@ backgroundColor :: Color
 backgroundColor = makeColor 0 0 0 255
 
 main :: IO ()
-main = play window backgroundColor 30 initialWorld worldAsPicture transformWorld animation
+main = play window backgroundColor 30 initialWorld worldAsPicture transformWorld animateWorld

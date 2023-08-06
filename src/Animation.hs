@@ -1,5 +1,5 @@
 module Animation (
-    animation
+    animateWorld
 ) where
 
-animation = const id
+animateWorld = const id
