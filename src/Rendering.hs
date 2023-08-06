@@ -9,6 +9,7 @@ import Data.Array
 filledCell :: Picture
 filledCell = rectangleSolid cellWidth cellHeight
 
+snapPictureToCell :: (Integral a, Integral b) => Picture -> (a, b) -> Picture
 snapPictureToCell picture (row, column) = translate x y picture
   where x = fromIntegral column * cellWidth + cellWidth * 0.5
         y = fromIntegral row * cellHeight + cellHeight * 0.5
