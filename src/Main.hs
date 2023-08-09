@@ -6,7 +6,7 @@ import World
 import Logic
 import Rendering
 import Animation
-import System.Random (newStdGen)
+import System.Random
 
 window :: Display
 window = InWindow "Sierpinski Triangle" (screenWidth, screenHeight) (100, 100)

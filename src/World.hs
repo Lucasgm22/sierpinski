@@ -14,7 +14,7 @@ module World (
 ) where
 
 import Data.Array
-import System.Random (StdGen, Random (randomR))
+import System.Random
 
 data Cell = VertexChoiceA | VertexChoiceB | VertexChoiceC | ChoosedPoint | Empty deriving (Eq, Show, Enum)
 
