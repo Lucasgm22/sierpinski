@@ -14,26 +14,26 @@ snapPictureToCell picture (row, column) = translate x y picture
   where x = fromIntegral column * cellWidth + cellWidth * 0.5
         y = fromIntegral row * cellHeight + cellHeight * 0.5
 
-cellsOfBoard :: Board -> Cell -> Picture -> Picture
-cellsOfBoard board cell cellPicture =
+cellsOfBoard :: Board -> Cell -> Picture
+cellsOfBoard board cell =
     pictures
-    $ map (snapPictureToCell cellPicture . fst)
+    $ map (snapPictureToCell filledCell . fst)
     $ filter (\(_, e) -> e == cell)
     $ assocs board
 
 vertexChoiceACellsOfBoard :: Board -> Picture
-vertexChoiceACellsOfBoard board = color red $ cellsOfBoard board VertexChoiceA filledCell
+vertexChoiceACellsOfBoard board = color red $ cellsOfBoard board VertexChoiceA
 
 
 vertexChoiceBCellsOfBoard :: Board -> Picture
-vertexChoiceBCellsOfBoard board = color green $ cellsOfBoard board VertexChoiceB filledCell
+vertexChoiceBCellsOfBoard board = color green $ cellsOfBoard board VertexChoiceB
 
 
 vertexChoiceCellsOfBoard :: Board -> Picture
-vertexChoiceCellsOfBoard board =  color blue $ cellsOfBoard board VertexChoiceC filledCell
+vertexChoiceCellsOfBoard board =  color blue $ cellsOfBoard board VertexChoiceC
 
 choosedPointCellOfBoard :: Board -> Picture
-choosedPointCellOfBoard board = color white $ cellsOfBoard board ChoosedPoint filledCell
+choosedPointCellOfBoard board = color white $ cellsOfBoard board ChoosedPoint
 
 pictureFilledCellOfBoard :: Board -> Picture
 pictureFilledCellOfBoard board = pictures [  
