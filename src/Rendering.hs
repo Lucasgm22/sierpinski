@@ -29,8 +29,8 @@ vertexChoiceBCellsOfBoard :: Board -> Picture
 vertexChoiceBCellsOfBoard board = color green $ cellsOfBoard board VertexChoiceB
 
 
-vertexChoiceCellsOfBoard :: Board -> Picture
-vertexChoiceCellsOfBoard board =  color blue $ cellsOfBoard board VertexChoiceC
+vertexChoiceCCellsOfBoard :: Board -> Picture
+vertexChoiceCCellsOfBoard board =  color blue $ cellsOfBoard board VertexChoiceC
 
 choosedPointCellOfBoard :: Board -> Picture
 choosedPointCellOfBoard board = color white $ cellsOfBoard board ChoosedPoint
@@ -39,7 +39,7 @@ pictureFilledCellOfBoard :: Board -> Picture
 pictureFilledCellOfBoard board = pictures [  
                                               vertexChoiceACellsOfBoard board
                                             , vertexChoiceBCellsOfBoard board
-                                            , vertexChoiceCellsOfBoard board
+                                            , vertexChoiceCCellsOfBoard board
                                             , choosedPointCellOfBoard board
                                           ]
 
